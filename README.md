@@ -1,1 +1,2 @@
 Ticwear API使用样例代码
+做了部分修改，在mobile gesture里加入了两次翻腕开始录音和结束录音的功能
