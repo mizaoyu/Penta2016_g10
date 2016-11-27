@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.ticwear.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.mobvoi.ticwear.mobvoiapidemo"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+/*repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}*/
+
+dependencies {
+    compile 'com.github.adrielcafe:AndroidAudioRecorder:0.2.0'
+    compile 'com.microsoft.cognitive:speakerrecognition:1.0.0'
+    compile 'com.ticwear:mobvoi-api:1.0.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    //compile 'com.github.adrielcafe:AndroidAudioRecorder:0.2.0'
+    //
+    testCompile 'junit:junit:4.12'
+    wearApp project(':wear')
+    compile 'com.microsoft.cognitive:speakerrecognition:1.0.0'
+}
